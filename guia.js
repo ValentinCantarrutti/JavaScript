@@ -86,6 +86,8 @@ while (i < 10) {
   i++; // Incrementa i en 1
 }
 
+// Test a ver si
+
 for (let d = 0; d <= 5; d++) {
   for (let u = 1; u <= 9; u++) {
     console.log("Numero " + d + u); // Imprime el valor decena sumado al de unidad
