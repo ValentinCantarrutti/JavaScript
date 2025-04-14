@@ -69,7 +69,7 @@ console.log(`Act n 5 : Ingrese una palabra (arroz) y repitala un numero de veces
 let pl = "Arroz"
 
 for (let rptr = 0; rptr < 11; rptr++) {
-    pl = pl + "Arroz"
+    pl += "Arroz"
   }
 
 console.log(`${pl}.`);
@@ -119,4 +119,39 @@ function nume(nume1, nume2) {
   console.log("Elementos entre 2 y 12:", resu);
   console.log("---------------------------------------------------------");
 
+//ACT 8
+
+  console.log(`Act n 8 : Los multiplos de 2 y 5 menores a 100.`);
+var mult = 0;
+var cn = 0;
+while (cn <= 100) 
+{
+    if (cn % 2 == 0 || cn % 5 == 0)
+    {
+         mult += `${cn} `;
+    }
+    cn++;
+}
+
+console.log(`Los multiplos de 2 y 5 menores a 100 son: ${mult}`);
+console.log("---------------------------------------------------------");
+
+//ACT 9
+
+console.log(`Act n 9 : La suma de los elementos del array (2, 23, 7, 5 y 25)`);
+let total=0
+numers = [2, 23, 7, 5, 25];
+for(let cnts = 0; cnts < numers.length; cnts++) total+=numers[cnts];
+console.log(`La suma de los elementos de un array da: ${total}.`); 
+console.log("---------------------------------------------------------");
+
+//ACT 10
+
+console.log(`Act n 10 : La suma de los elementos pares del array (2, 4, 7, y 9)`);
+let totalpar=0
+numers = [2, 4, 7, 9];
+for(let cunts = 0; cunts < numers.length; cunts++) 
+    if (numers[cunts] % 2 == 0) {totalpar+=numers[cunts];}
+console.log(`La suma de los elementos pares de un array da: ${totalpar}.`); 
+console.log("---------------------------------------------------------");
   
