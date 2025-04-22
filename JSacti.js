@@ -155,3 +155,65 @@ for(let cunts = 0; cunts < numers.length; cunts++)
 console.log(`La suma de los elementos pares de un array da: ${totalpar}.`); 
 console.log("---------------------------------------------------------");
   
+//ACT 11
+
+console.log(`Act n 11 : En una palabra identificar sus letras iguales y distintas, palabra: POLLO`);
+
+function contletr(palabra) {
+  const conteo = {};
+  for (const letra of palabra) {
+    if (conteo[letra]) {
+      conteo[letra]++;
+    } else {
+      conteo[letra] = 1;
+    }
+  }
+  return conteo;
+}
+
+contletr("POLLO");
+
+console.log(contletr("POLLO"));
+console.log("---------------------------------------------------------");
+
+//ACT 12
+
+console.log(`Act n 12 :Un objeto literal con las siguiente propiedades: nombre, sexo biológico y edad. Agregar varios elementos a una lista. Obtener el promedio de edad, el nombre de la mujer con mayor edad, el nombre del hombre con menor edad, el promedio de edad de las mujeres.`);
+
+let personas = [
+  { nombre: "Emilia", sexo: "F", edad: 20 },
+  { nombre: "Felipe", sexo: "M", edad: 25 },
+  { nombre: "Simona", sexo: "F", edad: 45 },
+  { nombre: "Enzo", sexo: "M", edad: 22 },
+];
+
+let edadpromedio =
+  personas.reduce((acc, p) => acc + p.edad, 0) / personas.length;
+
+console.log("Promedio de edad de todos:", Math.round(edadpromedio, 0));
+
+let mujeres = personas.filter((p) => p.sexo === "F");
+
+console.log("mujeres:", mujeres);
+
+let mujermr = mujeres.reduce(
+  (mayor, p) => (p.edad > mayor.edad ? p : mayor),
+  { edad: 0 }
+);
+
+console.log("Mujer de mayor edad:", mujermr.nombre);
+
+let hombres = personas.filter((p) => p.sexo === "M");
+console.log("hombres:", hombres);
+
+let hombreMer = hombres.reduce(
+  (menor, p) => (p.edad < menor.edad ? p : menor),
+  { edad: Infinity }
+);
+console.log("Hombre de menor edad:", hombreMer.nombre);
+
+let edadpromediomujeres =
+  mujeres.reduce((acc, p) => acc + p.edad, 0) / mujeres.length;
+
+console.log("Promedio de edad de mujeres:", Math.round(edadpromediomujeres, 0));
+
